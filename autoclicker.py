@@ -20,6 +20,7 @@ try:
     HAS_WIN32 = True
 except ImportError:
     HAS_WIN32 = False
+    
 
 class AutoClickerApp:
     def __init__(self, root):
