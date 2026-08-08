@@ -215,7 +215,7 @@ class AutoClickerApp:
             saveBitMap.CreateCompatibleBitmap(mfcDC, width, height)
             saveDC.SelectObject(saveBitMap)
 
-            # PW_RENDERFULLCONTENT (2) allows capturing DWM/Electron background windows
+        
             windll.user32.PrintWindow(hwnd, saveDC.GetSafeHdc(), 2)
 
             bmpinfo = saveBitMap.GetInfo()
