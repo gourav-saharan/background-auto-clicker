@@ -152,7 +152,7 @@ class AutoClickerApp:
 
     def capture_target(self):
         if not HAS_WIN32: return
-        time.sleep(0.5) # allow user to settle mouse
+        time.sleep(0.5)  
         x, y = pyautogui.position()
         hwnd = win32gui.WindowFromPoint((x, y))
         
