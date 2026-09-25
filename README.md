@@ -35,8 +35,6 @@ Unlike a traditional auto-clicker that spams a fixed screen coordinate, this too
 
 ## How It Works
 
-
-
 1. **Capture the target (F8)** — hover over the button you want clicked and press F8. The app screenshots a small region around your cursor, saves it as `target_button.png`, and records the parent window's title.
 2. **Scan the window** — while running, it silently captures the target window's pixels each cycle, even in the background.
 3. **Match** — the capture is converted to grayscale and compared against `target_button.png` using `cv2.matchTemplate` (`TM_CCOEFF_NORMED`). A confidence above **0.80** counts as a match.

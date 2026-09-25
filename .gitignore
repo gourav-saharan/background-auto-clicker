@@ -1,0 +1,21 @@
+# PyInstaller build artifacts
+build/
+dist/
+
+# Auto-generated runtime files (contain machine-specific target data)
+config.json
+target_button.png
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
