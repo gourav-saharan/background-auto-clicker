@@ -92,8 +92,8 @@ class AutoClickerApp:
 
         self.is_clicking = False
         self.running = True
-        self.targets = []  # list of ClickTarget
-        self.targets_lock = threading.Lock()  # protects self.targets
+        self.targets = []   
+        self.targets_lock = threading.Lock()   
         self.config_path = os.path.join(BASE_DIR, "config.json")
 
         self.setup_styles()
