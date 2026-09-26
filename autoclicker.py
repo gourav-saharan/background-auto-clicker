@@ -23,7 +23,6 @@ try:
     from ctypes import windll
     HAS_WIN32 = True
 
-    # Enable DPI awareness so coordinates match actual screen pixels
     try:
         windll.user32.SetProcessDPIAware()
     except Exception:
