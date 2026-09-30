@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """Ultimate Background Clicker (Multi-Target) — fixed build."""
 
 import tkinter as tk
@@ -34,7 +34,6 @@ except ImportError:
 def get_base_dir():
     """Return the directory where the exe or script lives."""
     if getattr(sys, 'frozen', False):
-        # Running as PyInstaller bundle
         return os.path.dirname(sys.executable)
     return os.path.dirname(os.path.abspath(__file__))
 
@@ -104,7 +103,6 @@ class AutoClickerApp:
         self.thread.start()
 
         try:
-            # Wrap hotkey callbacks in threads so they don't block the keyboard listener
             keyboard.add_hotkey('f8', lambda: threading.Thread(target=self.capture_target, daemon=True).start())
             keyboard.add_hotkey('f9', lambda: self.root.after(0, self.toggle_clicking))
         except Exception as e:
