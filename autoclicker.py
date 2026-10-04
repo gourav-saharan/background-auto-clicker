@@ -1,5 +1,4 @@
 
-"""Ultimate Background Clicker (Multi-Target) — fixed build."""
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext
@@ -107,8 +106,6 @@ class AutoClickerApp:
             keyboard.add_hotkey('f9', lambda: self.root.after(0, self.toggle_clicking))
         except Exception as e:
             self.log(f"WARNING: Could not bind hotkeys. Error: {e}")
-
-    # ─── Styles ────────────────────────────────────────────────
 
     def setup_styles(self):
         style = ttk.Style()
